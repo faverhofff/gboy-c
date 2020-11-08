@@ -2,6 +2,7 @@
 #ifndef __BASE_H
 #define __BASE_H
 
+#include <cstdio>
 #include <string>
 #include <iostream>
 using namespace std;

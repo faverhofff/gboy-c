@@ -8,7 +8,7 @@ public:
 	void Run();
 	
 private:
-	CPU mCPU;
+	CPU mCpu;
 	MMU mMmu;
 };
 

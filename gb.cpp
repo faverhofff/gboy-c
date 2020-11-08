@@ -4,9 +4,15 @@
 #include "gb.h"
 
 void GB::PowerUp(const string& _bootableRom, const string& _cartbridge) {
-	mMmu.LoadRoms(_bootableRom, _cartbridge);
+	try {
+		mMmu.LoadRoms(_bootableRom, _cartbridge);
+		mCpu.SetMmu(&mMmu);
 
-	while (true) {
-		mCPU.Step();
+		while (true) {
+			mCpu.Step();
+		}
+	}
+	catch (std::runtime_error &e) {
+		cout << e.what() << "\n";
 	}
 }

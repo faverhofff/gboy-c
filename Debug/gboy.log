@@ -1,3 +1,2 @@
-﻿  gboy.cpp
-C:\Proyectos\mygith\gboy\gboy.cpp(9,1): warning C4326: el tipo de valor devuelto de 'main' debe ser 'int' en lugar de 'void'
+﻿  cpu.cpp
   gboy.vcxproj -> C:\Proyectos\mygith\gboy\Debug\gboy.exe

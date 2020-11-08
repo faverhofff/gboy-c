@@ -16,7 +16,7 @@ public:
 
 		memory[physAddr] = _value;
 	}
-	inline u8 ReadU8(u16 _virtAdd) {
+	inline u8 ReadU8(u16 _virtAdd)  {
 		u8* memory;
 		u16 physAddr;
 
@@ -45,12 +45,13 @@ public:
 	}
 
 private:
-	void VirtAddrToPhysAddr(u16 _virtAddr, u8*& _memory, u16& _physAddr);
+	void VirtAddrToPhysAddr(u16 _virtAddr, u8*& _memory, u16& _physAddr) ;
 
-	u8 mRAM[S8Kb];
-	u8 mVRAM[S8Kb];
-	u8 *mROM;
-	u8 mBootableROM[256];
+	u8 mRam[S8Kb];
+	u8 mVRam[S8Kb];
+	u8 *mRom;
+	u8 mBootableRom[256];
+	bool mBootableRomEnabled = true;
 };
 
 #endif

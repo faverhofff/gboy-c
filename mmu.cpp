@@ -6,37 +6,39 @@
 
 MMU::MMU() 
 {
-	mROM = nullptr;
-	memset(mRAM, 0, S8Kb);
-	memset(mVRAM, 0, S8Kb);
-	memset(mBootableROM, 0, 256);
 }
 
 bool MMU::LoadRoms(const string& _bootableRom, const string& _filename) {
 	std::ifstream bootable(_bootableRom, std::ios::binary);
 
-	bootable.read((char*)mBootableROM, 256);
+	bootable.read((char*)mBootableRom, 256);
 
 	bootable.close();
 
 	return true;
 }
 
-void MMU::VirtAddrToPhysAddr(u16 _virtAddr, u8*& _memory, u16& _physAddr) {
+void MMU::VirtAddrToPhysAddr(u16 _virtAddr, u8*& _memory, u16& _physAddr)  {
+	if (mBootableRomEnabled && (_virtAddr >= 0x000) && (_virtAddr <= 0x0100)) {
+		_memory = &mBootableRom[0];
+		_physAddr = _virtAddr;
+		return;
+	}
+
 	if ((_virtAddr >= 0x000) && (_virtAddr <= 0x3FFF)) {
-		_memory = mROM;
+		_memory = mRom;
 		_physAddr = _virtAddr;
 		return;
 	}
 
 	if ((_virtAddr >= 0x8000) && (_virtAddr <= 0x9FFF)) {
-		_memory = mVRAM;
+		_memory = &mVRam[0];
 		_physAddr = _virtAddr - 0x8000;
 		return;
 	}
 
 	if ((_virtAddr >= 0xC000) && (_virtAddr <= 0xDFFF)) {
-		_memory = mVRAM;
+		_memory = &mRam[0];
 		_physAddr = _virtAddr - 0xC000;
 		return;
 	}

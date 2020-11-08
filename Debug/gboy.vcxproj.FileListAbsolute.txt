@@ -1,2 +1,0 @@
-C:\Proyectos\mygith\gboy\Debug\gboy.exe
-C:\Proyectos\mygith\gboy\Debug\gboy.pdb

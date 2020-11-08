@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="cpu.cpp" />
+    <ClCompile Include="gb.cpp" />
     <ClCompile Include="gboy.cpp" />
     <ClCompile Include="mmu.cpp" />
   </ItemGroup>

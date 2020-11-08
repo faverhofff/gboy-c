@@ -4,9 +4,9 @@
 
 class GB {
 public:
-	GB();
-	~GB();
-
+	void PowerUp(const string& _bootableRom, const string& _cartbridge);
+	void Run();
+	
 private:
 	CPU mCPU;
 	MMU mMmu;

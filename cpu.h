@@ -2,9 +2,13 @@
 #ifndef __CPU_H
 #define __CPU_H
 
+class MMU;
+
 class CPU {
 public:
 	CPU();
+
+	void Step() { };
 
 private:
 	MMU* mMmu;

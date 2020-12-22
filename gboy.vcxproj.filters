@@ -36,28 +36,13 @@
     <ClCompile Include="debugger.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="libraries\imgui-master\backends\imgui_impl_sdl.cpp">
+    <ClCompile Include="libraries\imgui\imgui.cpp">
       <Filter>imgui</Filter>
     </ClCompile>
-    <ClCompile Include="libraries\imgui-master\imgui.cpp">
+    <ClCompile Include="libraries\imgui\imgui_draw.cpp">
       <Filter>imgui</Filter>
     </ClCompile>
-    <ClCompile Include="libraries\imgui-master\imgui_demo.cpp">
-      <Filter>imgui</Filter>
-    </ClCompile>
-    <ClCompile Include="libraries\imgui-master\imgui_draw.cpp">
-      <Filter>imgui</Filter>
-    </ClCompile>
-    <ClCompile Include="libraries\imgui-master\imgui_tables.cpp">
-      <Filter>imgui</Filter>
-    </ClCompile>
-    <ClCompile Include="libraries\imgui-master\imgui_widgets.cpp">
-      <Filter>imgui</Filter>
-    </ClCompile>
-    <ClCompile Include="libraries\imgui-master\backends\imgui_impl_opengl3.cpp">
-      <Filter>imgui</Filter>
-    </ClCompile>
-    <ClCompile Include="libraries\imgui-master\examples\libs\gl3w\GL\gl3w.c">
+    <ClCompile Include="libraries\imgui\imgui_impl_sdl.cpp">
       <Filter>imgui</Filter>
     </ClCompile>
   </ItemGroup>
@@ -77,25 +62,10 @@
     <ClInclude Include="debugger.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="libraries\imgui-master\backends\imgui_impl_sdl.h">
+    <ClInclude Include="libraries\imgui\imgui.h">
       <Filter>imgui</Filter>
     </ClInclude>
-    <ClInclude Include="libraries\imgui-master\imconfig.h">
-      <Filter>imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="libraries\imgui-master\imgui.h">
-      <Filter>imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="libraries\imgui-master\imgui_internal.h">
-      <Filter>imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="libraries\imgui-master\backends\imgui_impl_opengl3.h">
-      <Filter>imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="libraries\imgui-master\examples\libs\gl3w\GL\gl3w.h">
-      <Filter>imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="libraries\imgui-master\examples\libs\gl3w\GL\glcorearb.h">
+    <ClInclude Include="libraries\imgui\imgui_impl_sdl.h">
       <Filter>imgui</Filter>
     </ClInclude>
   </ItemGroup>

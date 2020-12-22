@@ -88,7 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Data\proyectos\gboy-c\libraries\imgui-master\examples\libs\glfw\include;C:\Data\proyectos\gboy-c\libraries\imgui-master\backends;C:\Data\proyectos\gboy-c\libraries\imgui-master\examples\libs\glfw;C:\Data\proyectos\gboy-c\libraries\imgui-master;C:\Data\proyectos\gboy-c\libraries\SDL2-2.0.14\include;C:\Data\proyectos\gboy-c\libraries\imgui-master\examples\libs\glfw\include\GLFW;C:\Data\proyectos\gboy-c\libraries\imgui-master\examples\libs\gl3w;C:\Data\proyectos\gboy-c\libraries\imgui-master\examples\libs\glfw\lib-vc2010-32;%SDL2_DIR%\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Data\proyectos\gboy-c\libraries\imgui\examples\libs\glfw\include;C:\Data\proyectos\gboy-c\libraries\imgui\backends;C:\Data\proyectos\gboy-c\libraries\imgui\examples\libs\glfw;C:\Data\proyectos\gboy-c\libraries\imgui;C:\Data\proyectos\gboy-c\libraries\SDL2-2.0.14\include;C:\Data\proyectos\gboy-c\libraries\imgui\examples\libs\glfw\include\GLFW;C:\Data\proyectos\gboy-c\libraries\imgui\examples\libs\gl3w;C:\Data\proyectos\gboy-c\libraries\imgui\examples\libs\glfw\lib-vc2010-32;%SDL2_DIR%\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -148,14 +148,9 @@
     <ClCompile Include="debugger.cpp" />
     <ClCompile Include="gb.cpp" />
     <ClCompile Include="gboy.cpp" />
-    <ClCompile Include="libraries\imgui-master\backends\imgui_impl_opengl3.cpp" />
-    <ClCompile Include="libraries\imgui-master\backends\imgui_impl_sdl.cpp" />
-    <ClCompile Include="libraries\imgui-master\examples\libs\gl3w\GL\gl3w.c" />
-    <ClCompile Include="libraries\imgui-master\imgui.cpp" />
-    <ClCompile Include="libraries\imgui-master\imgui_demo.cpp" />
-    <ClCompile Include="libraries\imgui-master\imgui_draw.cpp" />
-    <ClCompile Include="libraries\imgui-master\imgui_tables.cpp" />
-    <ClCompile Include="libraries\imgui-master\imgui_widgets.cpp" />
+    <ClCompile Include="libraries\imgui\imgui.cpp" />
+    <ClCompile Include="libraries\imgui\imgui_draw.cpp" />
+    <ClCompile Include="libraries\imgui\imgui_impl_sdl.cpp" />
     <ClCompile Include="mmu.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -163,13 +158,8 @@
     <ClInclude Include="cpu.h" />
     <ClInclude Include="debugger.h" />
     <ClInclude Include="gb.h" />
-    <ClInclude Include="libraries\imgui-master\backends\imgui_impl_opengl3.h" />
-    <ClInclude Include="libraries\imgui-master\backends\imgui_impl_sdl.h" />
-    <ClInclude Include="libraries\imgui-master\examples\libs\gl3w\GL\gl3w.h" />
-    <ClInclude Include="libraries\imgui-master\examples\libs\gl3w\GL\glcorearb.h" />
-    <ClInclude Include="libraries\imgui-master\imconfig.h" />
-    <ClInclude Include="libraries\imgui-master\imgui.h" />
-    <ClInclude Include="libraries\imgui-master\imgui_internal.h" />
+    <ClInclude Include="libraries\imgui\imgui.h" />
+    <ClInclude Include="libraries\imgui\imgui_impl_sdl.h" />
     <ClInclude Include="mmu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

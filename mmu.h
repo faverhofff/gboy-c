@@ -9,47 +9,26 @@ public:
 	bool LoadRoms(const string& _bootableRom, const string& _filename);
 
 	inline void WriteU8(u16 _virtAdd, u8 _value) {
-		u8 *memory;
-		u16 physAddr;
-
-		VirtAddrToPhysAddr(_virtAdd, memory, physAddr);
-
-		memory[physAddr] = _value;
+		(*VirtAddrToPhysAddr(_virtAdd)) = _value;
 	}
 	inline u8 ReadU8(u16 _virtAdd)  {
-		u8* memory;
-		u16 physAddr;
-
-		VirtAddrToPhysAddr(_virtAdd, memory, physAddr);
-
-		return memory[physAddr];
+		return *VirtAddrToPhysAddr(_virtAdd);
 	}
 
 	inline void WriteU16(u16 _virtAdd, u16 _value) {
-		u8* memory;
-		u16 physAddr;
-
-		VirtAddrToPhysAddr(_virtAdd, memory, physAddr);
-
-		memory[physAddr] = _value & 0x00FF;
-		memory[physAddr + 1] = (_value >> 8) & 0x00FF;
+		*(u16*)VirtAddrToPhysAddr(_virtAdd) = _value;
 	}
 
 	inline u16 ReadU16(u16 _virtAdd) {
-		u8* memory;
-		u16 physAddr;
-
-		VirtAddrToPhysAddr(_virtAdd, memory, physAddr);
-
-		return (memory[physAddr + 1] << 8) | memory[physAddr];
+		return *(u16*)VirtAddrToPhysAddr(_virtAdd);
 	}
 
 private:
-	void VirtAddrToPhysAddr(u16 _virtAddr, u8*& _memory, u16& _physAddr) ;
+	u8* VirtAddrToPhysAddr(u16 _virtAddr);
 
 	u8 mRam[S8Kb];
 	u8 mVRam[S8Kb];
-	u8 *mRom;
+	u8 *mRom{ nullptr };
 	u8 mBootableRom[256];
 	bool mBootableRomEnabled = true;
 };

@@ -10,9 +10,11 @@ void CPU::Step()
 		case 0x31:	// LD SP, nn
 			mRegSP = mMmu->ReadU16(mRegPC);
 			mRegPC += 2;
+			cout << "LD SP, " << Int2Hex(mRegSP) << endl;
 			break;
 
 		default:
-			throw std::runtime_error("unknow upcode." + opcode);
+			throw std::runtime_error("unknow upcode: " + Int2Hex(opcode));
+			break;
 	}
 };
